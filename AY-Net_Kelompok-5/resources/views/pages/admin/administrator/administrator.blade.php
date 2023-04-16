@@ -35,9 +35,9 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="javascript:void(0);">1</a></td>
-                                                <td><a href="javascript:void(0);">Tiger Nixon</a></td>
-                                                <td><a href="javascript:void(0);">info@example.com</a></td>
-                                                <td><a href="javascript:void(0);">123 456 7890</a></td>
+                                                <td><a href="javascript:void(0);">Admin 1</a></td>
+                                                <td><a href="javascript:void(0);">admin1@gmail.com</a></td>
+                                                <td><a href="javascript:void(0);">082156328910</a></td>
                                                 <td>
 													<div class="d-flex">
 														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

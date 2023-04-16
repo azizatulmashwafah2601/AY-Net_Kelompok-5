@@ -36,8 +36,21 @@
                                         <tbody>
                                             <tr>
                                                 <td><a href="javascript:void(0);">1</a></td>
-                                                <td><a href="javascript:void(0);">Tiger Nixon</a></td>
-                                                <td><a href="javascript:void(0);">123 456 7890</a></td>
+                                                <td><a href="javascript:void(0);">Budi Hartono</a></td>
+                                                <td><a href="javascript:void(0);">081234567890</a></td>
+                                                <td><a href="javascript:void(0);">Tanggul</a></td>
+                                                <td><a href="javascript:void(0);">3 Mbps</a></td>
+                                                <td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>												
+												</td>												
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0);">2</a></td>
+                                                <td><a href="javascript:void(0);">Agus Sartono</a></td>
+                                                <td><a href="javascript:void(0);">081234567890</a></td>
                                                 <td><a href="javascript:void(0);">Tanggul</a></td>
                                                 <td><a href="javascript:void(0);">3 Mbps</a></td>
                                                 <td>

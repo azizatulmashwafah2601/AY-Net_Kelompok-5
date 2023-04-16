@@ -54,7 +54,7 @@
 				</a>
 			</li>
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a href="{{ route('transaksi') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
                     <span class="nav-text">Transaksi</span>
                 </a>
@@ -67,7 +67,7 @@
             </li>
 		<div class="copyright">
 			<p><strong>AY Net - Bondowoso</strong> © 2023 All Rights Reserved</p>
-			<p class="fs-12">Made with <span class="heart"></span> by DADI</p>
+			<p class="fs-12">Made with <span class="heart"></span> by AY TEAM</p>
 		</div>
 	</div>
 </div>
