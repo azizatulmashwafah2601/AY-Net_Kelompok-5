@@ -26,25 +26,25 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Administrator</th>
-                                                <th>Email</th>
-                                                <th>No Telpon</th>
+                                                <th>Username</th>
+                                                <th>Foto</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($administrator as $item)
                                             <tr>
-                                                <td><a href="javascript:void(0);">1</a></td>
-                                                <td><a href="javascript:void(0);">Admin 1</a></td>
-                                                <td><a href="javascript:void(0);">admin1@gmail.com</a></td>
-                                                <td><a href="javascript:void(0);">082156328910</a></td>
+                                                <td>{{ $loop->iteration }}</td>
+                                                    <td><a href="javascript:void(0);">{{ $item->username }}</a></td>
+                                                    <td><img src="{{ url('/img/administrator/'.$item->foto_profil) }}" alt="picture" width="100px"></td>
                                                 <td>
 													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+														<!-- <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a> -->
 														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
 													</div>												
 												</td>												
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
