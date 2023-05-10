@@ -26,7 +26,8 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Username</th>
+                                                <th>Nama</th>
+                                                <th>Email</th>
                                                 <th>Foto</th>
                                                 <th>Action</th>
                                             </tr>
@@ -35,7 +36,8 @@
                                             @foreach ($administrator as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                    <td><a href="javascript:void(0);">{{ $item->username }}</a></td>
+                                                    <td><a href="javascript:void(0);">{{ $item->name }}</a></td>    
+                                                    <td><a href="javascript:void(0);">{{ $item->email }}</a></td>
                                                     <td><img src="{{ url('/img/administrator/'.$item->foto_profil) }}" alt="picture" width="100px"></td>
                                                 <td>
 													<div class="d-flex">

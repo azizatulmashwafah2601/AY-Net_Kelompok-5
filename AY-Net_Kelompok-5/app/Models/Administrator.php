@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Administrator extends Model
 {
-    protected $table = 'admin';
-    protected $primaryKey = 'id_admin';
+    protected $table = 'users';
+    protected $primaryKey = 'id';
     protected $fillable = [
-        'username', 'password', 'foto_profil',
+        'name','email', 'password', 'foto_profil',
     ];
 }
