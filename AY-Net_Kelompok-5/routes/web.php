@@ -13,7 +13,22 @@
 
 Route::prefix('admin')
     ->namespace('Admin')
-    ->group(function(){
+    ->group(function(){    
+        // Login
+        Route::get('/login', 'LoginController@index')
+            ->name('login');
+        Route::get('/postlogin', 'LoginController@postlogin')
+            ->name('postlogin');
+    });
+    
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->middleware(['auth'])
+    ->group(function(){    
+        // Logout 
+        Route::get('/logout', 'LoginController@logout')
+        ->name('logout');   
+        // Dashboard
         Route::get('/dashboard', 'DashboardController@index')
             ->name('dashboard');
         Route::get('/dashboard', 'DashboardController@index')
