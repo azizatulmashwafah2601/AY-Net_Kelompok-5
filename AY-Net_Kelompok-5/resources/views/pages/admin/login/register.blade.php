@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Login | AY NET - Bondowoso</title>
+	<title>Register | AY NET - Bondowoso</title>
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="{{url('frontend/images/logo-ay.png')}}">
@@ -35,40 +35,27 @@
 									<div class="text-center mb-3">
 										<a href="index.html"><img src="{{url('frontend/images/logo-ay.png')}}" alt="" width="80"></a>
 									</div>
-                                    <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="{{route('postlogin')}}">
+                                    <h4 class="text-center mb-4">Register your account</h4>
+                                    <form action="{{route('saveRegister')}}" method="post">
                                         {{ csrf_field() }}
                                         <div class="mb-3">
-                                                <label class="text-label form-label" for="validationCustomUsername">Email</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                                                    <input type="text" class="form-control" id="email" placeholder="Masukkan email" name="email">
-                                                </div>
+                                            <label class="mb-1"><strong>Name</strong></label>
+                                            <input type="text" class="form-control" name='name'>
                                         </div>
                                         <div class="mb-3">
-                                                <label class="text-label form-label" for="validationCustomUsername">Password</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                                                    <input type="password" class="form-control" id="password" placeholder="Masukkan password" name="password">
-                                                </div>
+                                            <label class="mb-1"><strong>Email</strong></label>
+                                            <input type="email" class="form-control" name='email'>
                                         </div>
-                                        <!-- <div class="row d-flex justify-content-between mt-4 mb-2">
-                                            <div class="mb-3">
-                                               <div class="form-check custom-checkbox ms-1">
-													<input type="checkbox" class="form-check-input" id="basic_checkbox_1">
-													<label class="form-check-label" for="basic_checkbox_1">Remember my preference</label>
-												</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <a href="page-forgot-password.html">Forgot Password?</a>
-                                            </div>
-                                        </div> -->
+                                        <div class="mb-3">
+                                            <label class="mb-1"><strong>Password</strong></label>
+                                            <input type="password" class="form-control" name='password'>
+                                        </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+                                            <button type="submit" class="btn btn-primary btn-block">Register</button>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Belum punya akun? <a class="text-primary" href="{{ route('register') }}">Daftar</a></p>
+                                        <p>Already have an account? <a class="text-primary" href="{{ route('login') }}">Sign up</a></p>
                                     </div>
                                 </div>
                             </div>

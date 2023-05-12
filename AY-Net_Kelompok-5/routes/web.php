@@ -15,10 +15,11 @@ Route::prefix('admin')
     ->namespace('Admin')
     ->group(function(){    
         // Login
-        Route::get('/login', 'LoginController@index')
-            ->name('login');
-        Route::get('/postlogin', 'LoginController@postlogin')
-            ->name('postlogin');
+        Route::get('/login', 'LoginController@index')->name('login');
+        Route::get('/postlogin', 'LoginController@postlogin')->name('postlogin');   
+        // Register
+        Route::get('/register', 'LoginController@indexRegister')->name('register');
+        Route::post('/saveRegister', 'LoginController@saveRegister')->name('saveRegister');
     });
     
 Route::prefix('admin')
@@ -26,25 +27,19 @@ Route::prefix('admin')
     ->middleware(['auth'])
     ->group(function(){    
         // Logout 
-        Route::get('/logout', 'LoginController@logout')
-        ->name('logout');   
+        Route::get('/logout', 'LoginController@logout')->name('logout');
         // Dashboard
-        Route::get('/dashboard', 'DashboardController@index')
-            ->name('dashboard');
-        Route::get('/dashboard', 'DashboardController@index')
-            ->name('admin');
+        Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+        Route::get('/dashboard', 'DashboardController@index')->name('admin');
         // Administrator 
-        Route::get('/administrator', 'AdministratorController@index')
-            ->name('administrator');
+        Route::get('/administrator', 'AdministratorController@index')->name('administrator');
         // Pelanggan 
-        Route::get('/pelanggan', 'PelangganController@index')
-            ->name('pelanggan');
+        Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');
         // Paket
-        Route::get('/paket', 'PaketController@index')
-            ->name('paket');
+        Route::get('/paket', 'PaketController@index')->name('paket');
+        Route::get('/addpaket', 'PaketController@addpaket')->name('addpaket');
+        Route::post('/savepaket', 'PaketController@savepaket')->name('savepaket');
         // Tagihan
-        Route::get('/tagihan', 'TagihanController@index')
-            ->name('tagihan');
-        Route::get('/transaksi', 'TransaksiController@index')
-            ->name('transaksi');
+        Route::get('/tagihan', 'TagihanController@index')->name('tagihan');
+        Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
     });

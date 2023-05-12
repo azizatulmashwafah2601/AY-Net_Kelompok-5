@@ -7,7 +7,6 @@
 				
 				<div class="row page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item active"><a href="{{ route('admin') }}">Dashboard</a></li>
 						<li class="breadcrumb-item"><a href="javascript:void(0);">Paket</a></li>
 					</ol>
                 </div>
@@ -18,7 +17,7 @@
                                 <h4 class="card-title">Data Paket</h4>
                             </div>
                             <div class="card-body">
-                                <a href="javascript:void(0);" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
+                                <a href="{{ route('addpaket') }}" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
                             <!-- </div>
                             <div class="card-body"> -->
                                 <div class="table-responsive">
