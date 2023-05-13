@@ -17,7 +17,8 @@
                                 <h4 class="card-title">Data Paket</h4>
                             </div>
                             <div class="card-body">
-                                <a href="{{ route('addpaket') }}" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
+                                <a href="{{ route('paket.addpaket') }}" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
+                                {{ csrf_field() }}
                             <!-- </div>
                             <div class="card-body"> -->
                                 <div class="table-responsive">
@@ -31,28 +32,19 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td><a href="javascript:void(0);">1</a></td>
-                                                <td><a href="javascript:void(0);">3 Mbps</a></td>
-                                                <td><a href="javascript:void(0);">Rp. 100.000</a></td>
-                                                <td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-													</div>												
-												</td>												
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:void(0);">3</a></td>
-                                                <td><a href="javascript:void(0);">5 Mbps</a></td>
-                                                <td><a href="javascript:void(0);">Rp. 150.000</a></td>
-                                                <td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-													</div>												
-												</td>												
-                                            </tr>
+                                            @foreach ($listpaket as $item)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td><a href="javascript:void(0);">{{ $item->nama_paket }}</a></td>
+                                                    <td><a href="javascript:void(0);">Rp. {{ $item->harga_paket }}</a></td>
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                            <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                        </div>												
+												    </td>	
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -61,4 +53,5 @@
                     </div>
             </div>
         </div>
+@include('sweetalert::alert') 
 @endsection

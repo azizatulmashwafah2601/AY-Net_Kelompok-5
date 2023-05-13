@@ -37,8 +37,8 @@ Route::prefix('admin')
         Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');
         // Paket
         Route::get('/paket', 'PaketController@index')->name('paket');
-        Route::get('/addpaket', 'PaketController@addpaket')->name('addpaket');
-        Route::post('/savepaket', 'PaketController@savepaket')->name('savepaket');
+        Route::get('/addpaket', 'PaketController@addpaket')->name('paket.addpaket');
+        Route::post('/savepaket', 'PaketController@savepaket')->name('paket.savepaket');
         // Tagihan
         Route::get('/tagihan', 'TagihanController@index')->name('tagihan');
         Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');

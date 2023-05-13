@@ -18,8 +18,8 @@
                             </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form action="{{ route('savepaket') }}" method="post">
-                                            {{ csrf_field() }}
+                                        <form action="{{ route('paket.savepaket') }}" method="post">
+                                        {{ csrf_field() }}
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Paket</label>
                                                 <div class="input-group">
@@ -30,8 +30,8 @@
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="dlab-password">Harga Paket</label>
                                                 <div class="input-group transparent-append">
-                                                    <span class="input-group-text"> <i class="fa fa-money"></i> </span>
-                                                    <input type="text" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket">
+                                                    <span class="input-group-text"> Rp. </span>
+                                                    <input type="number" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket">
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
