@@ -14,12 +14,13 @@ class PaketController extends Controller
         return view('pages.admin.paket.paket', compact('listpaket'));
     }
 
-    public function addpaket(){
+    public function add(){
         return view('pages.admin.paket.addpaket');
     }
 
-    public function savepaket(Request $request) {
-        $request->validate([
+    public function save(Request $request) 
+    {
+        $this->validate($request, [
             'nama_paket' => 'required',
             'harga_paket' => 'required',
         ]);
@@ -30,5 +31,27 @@ class PaketController extends Controller
         ]);
 
         return redirect('admin/paket')->with('toast_success', 'Data Berhasil Ditambahkan');
+    }
+
+    public function edit($id_paket) {
+        $paket = Paket::findorfail($id_paket);
+        return view('pages.admin.paket.editpaket', compact('paket'));
+    }
+
+    public function update(Request $request, $id_paket) {
+        $this->validate($request, [
+            'nama_paket' => 'required',
+            'harga_paket' => 'required',
+        ]);
+
+        $paket = Paket::findorfail($id_paket);
+        $paket->update($request->all());
+        return redirect('admin/paket')->with('toast_success', 'Data Berhasil Diubah');
+    }
+
+    public function destroy($id_paket) {
+        $paket = Paket::findorfail($id_paket);
+        $paket->delete();
+        return back()->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

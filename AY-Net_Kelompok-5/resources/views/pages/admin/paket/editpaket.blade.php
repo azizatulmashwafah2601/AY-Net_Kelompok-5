@@ -1,6 +1,6 @@
 @extends('layouts.admin.admin')
 
-@section('titlePage', ' Tambah Paket | AY NET - Bondowoso')
+@section('titlePage', ' Edit Paket | AY NET - Bondowoso')
 @section('content')
         <div class="content-body">
             <div class="container-fluid">
@@ -14,24 +14,24 @@
                 <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Tambah Data Paket</h4>
+                                <h4 class="card-title">Edit Data Paket</h4>
                             </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form action="{{ route('savepaket') }}" method="post">
+                                        <form action="{{ route('updatepaket', $paket->id_paket) }}" method="post">
                                         {{ csrf_field() }}
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Paket</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                                                    <input type="text" class="form-control" id="nama_paket" placeholder="Masukkan nama paket.." name="nama_paket">
+                                                    <input type="text" class="form-control" id="nama_paket" placeholder="Masukkan nama paket.." name="nama_paket" value="{{ $paket->nama_paket }}">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="dlab-password">Harga Paket</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> Rp. </span>
-                                                    <input type="number" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket">
+                                                    <input type="number" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket" value="{{ $paket->harga_paket }}">
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>

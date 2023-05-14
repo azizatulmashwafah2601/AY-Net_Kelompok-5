@@ -28,17 +28,25 @@ Route::prefix('admin')
     ->group(function(){    
         // Logout 
         Route::get('/logout', 'LoginController@logout')->name('logout');
+
         // Dashboard
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('/dashboard', 'DashboardController@index')->name('admin');
+
         // Administrator 
         Route::get('/administrator', 'AdministratorController@index')->name('administrator');
+        
         // Pelanggan 
         Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');
+        
         // Paket
         Route::get('/paket', 'PaketController@index')->name('paket');
-        Route::get('/addpaket', 'PaketController@addpaket')->name('paket.addpaket');
-        Route::post('/savepaket', 'PaketController@savepaket')->name('paket.savepaket');
+        Route::get('/addpaket', 'PaketController@add')->name('addpaket');
+        Route::post('/savepaket', 'PaketController@save')->name('savepaket');
+        Route::get('/editpaket/{id_paket}', 'PaketController@edit')->name('editpaket');
+        Route::post('/updatepaket/{id_paket}', 'PaketController@update')->name('updatepaket');
+        Route::get('/deletepaket/{id_paket}', 'PaketController@destroy')->name('deletepaket');
+        
         // Tagihan
         Route::get('/tagihan', 'TagihanController@index')->name('tagihan');
         Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
