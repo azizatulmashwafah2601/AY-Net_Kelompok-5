@@ -64,6 +64,7 @@
                                                 <th>Nama Pelanggan</th>
                                                 <th>Jenis Paket</th>
                                                 <th>Tagihan</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -71,13 +72,23 @@
                                                 <td>1</td>
                                                 <td>Budi Hartono</td>
                                                 <td>3 Mbps</td>
-                                                <td>Rp. 100.000</td>												
+                                                <td>Rp. 100.000</td>
+                                                <td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+													</div>												
+												</td>												
                                             </tr>
                                             <tr>
                                                 <td>1</td>
                                                 <td>Agus Sartono</td>
                                                 <td>5 Mbps</td>
-                                                <td>Rp. 150.000</td>												
+                                                <td>Rp. 150.000</td>
+                                                <td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+													</div>												
+												</td>												
                                             </tr>
                                         </tbody>
                                     </table>
