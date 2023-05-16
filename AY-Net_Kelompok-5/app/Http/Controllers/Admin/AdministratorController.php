@@ -14,4 +14,9 @@ class AdministratorController extends Controller
         return view('pages.admin.administrator.administrator', compact('administrator'));
     }
 
+    public function destroy($id) {
+        $administrator = Administrator::findorfail($id);
+        $administrator->delete();
+        return back()->with('toast_success', 'Data Berhasil Dihapus');
+    }
 }
