@@ -49,7 +49,8 @@
                                             <label class="col-sm-2 col-form-label"><strong></strong></label>
                                             <div class="col-sm-3 d-flex">
                                                 <button type="submit" class="btn btn-danger me-2"><strong>Batal</strong></button>
-                                                <button type="submit" class="btn btn-primary"><strong>Buat Tagihan</strong></button>
+                                                <a href="{{ route('transaksi') }}" class="btn btn-primary d-sm-inline-block">Buat Tagihan</a>
+                                                {{ csrf_field() }}
                                             </div>
                                         </div>
                                     </form>
