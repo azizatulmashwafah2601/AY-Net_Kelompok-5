@@ -48,41 +48,12 @@
                                         <div class="mb-3 row">
                                             <label class="col-sm-2 col-form-label"><strong></strong></label>
                                             <div class="col-sm-3 d-flex">
-                                                <button type="submit" class="btn btn-danger me-2"><strong>Batal</strong></button>
-                                                <button type="submit" class="btn btn-primary"><strong>Buat Tagihan</strong></button>
+                                                <button type="submit" class="btn btn-primary"><strong>Lihat</strong></button>
                                             </div>
                                         </div>
                                     </form>
                                 </div></br>
                             <!-- </div>
-                            <div class="card-body"> -->
-                                <div class="table-responsive">
-                                    <table id="example3" class="display" style="min-width: 845px">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama Pelanggan</th>
-                                                <th>Jenis Paket</th>
-                                                <th>Tagihan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Budi Hartono</td>
-                                                <td>3 Mbps</td>
-                                                <td>Rp. 100.000</td>												
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Agus Sartono</td>
-                                                <td>5 Mbps</td>
-                                                <td>Rp. 150.000</td>												
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
                     </div>
             </div>
