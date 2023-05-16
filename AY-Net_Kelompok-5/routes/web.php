@@ -33,8 +33,13 @@ Route::prefix('admin')
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('/dashboard', 'DashboardController@index')->name('admin');
 
+        // Profil
+        Route::get('/profil', 'ProfilController@index')->name('profil');
+        Route::post('/profilupdate', 'ProfilController@profilupdate')->name('profilupdate');
+
         // Administrator 
         Route::get('/administrator', 'AdministratorController@index')->name('administrator');
+        Route::get('/deleteadmin/{id}', 'AdministratorController@destroy')->name('deleteadmin');
         
         // Pelanggan 
         Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');

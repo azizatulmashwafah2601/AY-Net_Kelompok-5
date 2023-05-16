@@ -17,7 +17,7 @@
                                 <h4 class="card-title">Data Administrator</h4>
                             </div>
                             <div class="card-body">
-                                <a href="javascript:void(0);" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
+                                <!-- <a href="javascript:void(0);" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br> -->
                             <!-- </div>
                             <div class="card-body"> -->
                                 <div class="table-responsive">
@@ -41,7 +41,7 @@
                                                 <td>
 													<div class="d-flex">
 														<!-- <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a> -->
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+														<a href="{{ route('deleteadmin', $item->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
 													</div>												
 												</td>												
                                             </tr>
@@ -54,4 +54,5 @@
                     </div>
             </div>
         </div>
+@include('sweetalert::alert')         
 @endsection
