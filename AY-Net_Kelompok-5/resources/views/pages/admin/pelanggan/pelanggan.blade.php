@@ -17,7 +17,7 @@
                                 <h4 class="card-title">Data Pelanggan</h4>
                             </div>
                             <div class="card-body">
-                                <a href="javascript:void(0);" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
+                                <a href="{{ route('addpelanggan') }}" class="btn btn-primary d-sm-inline-block">Tambah</a></br></br>
                             <!-- </div>
                             <div class="card-body"> -->
                                 <div class="table-responsive">
@@ -28,37 +28,25 @@
                                                 <th>Nama Pelanggan</th>
                                                 <th>No Telpon</th>
                                                 <th>Alamat</th>
-                                                <th>Jenis Paket</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td><a href="javascript:void(0);">1</a></td>
-                                                <td><a href="javascript:void(0);">Budi Hartono</a></td>
-                                                <td><a href="javascript:void(0);">081234567890</a></td>
-                                                <td><a href="javascript:void(0);">Tanggul</a></td>
-                                                <td><a href="javascript:void(0);">3 Mbps</a></td>
-                                                <td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-													</div>												
-												</td>												
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:void(0);">2</a></td>
-                                                <td><a href="javascript:void(0);">Agus Sartono</a></td>
-                                                <td><a href="javascript:void(0);">081234567890</a></td>
-                                                <td><a href="javascript:void(0);">Tanggul</a></td>
-                                                <td><a href="javascript:void(0);">3 Mbps</a></td>
-                                                <td>
-													<div class="d-flex">
-														<a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-													</div>												
-												</td>												
-                                            </tr>
+                                        @foreach ($listpelanggan as $item)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td>{{ $item->nama_pelanggan }}</td>
+                                                    <td>{{ $item->no_telp }}</td>
+                                                    <td>{{ $item->alamat }}</td>
+                                                    <td>{{ $item->no_telp }}</td>
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                            <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                        </div>												
+												    </td>	
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
