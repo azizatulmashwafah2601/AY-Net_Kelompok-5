@@ -56,4 +56,7 @@ Route::prefix('admin')
         // Tagihan
         Route::get('/tagihan', 'TagihanController@index')->name('tagihan');
         Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
+
+        // Transaksi
+        Route::get('/viewtransaksi', 'TransaksiController@view')->name('viewtransaksi');
     });
