@@ -46,8 +46,9 @@
                                         <td><span class="badge badge-danger">Belum Bayar</span></td>
                                         <td>
                                             <div class="d-flex">
-                                                <button type="button" class="btn btn-primary btn-xxs">Bayar</button>
-                                                <button type="button" class="btn btn-success btn-xxs">WA</button>
+                                                <a href="{{ route('lunastransaksi') }}" class="btn btn-primary btn-xxs">Bayar</a>
+                                                <a href="{{ route('viewtransaksi') }}" class="btn btn-success btn-xxs">WA</a>
+                                                {{ csrf_field() }}
                                             </div>
                                         </td>
                                     </tr>
@@ -59,8 +60,9 @@
                                         <td><span class="badge badge-danger">Belum Bayar</span></td>
                                         <td>
                                             <div class="d-flex">
-                                                <button type="button" class="btn btn-primary btn-xxs">Bayar</button>
-                                                <button type="button" class="btn btn-success btn-xxs">WA</button>
+                                                <a href="{{ route('lunastransaksi') }}" class="btn btn-primary btn-xxs">Bayar</a>
+                                                <a href="{{ route('viewtransaksi') }}" class="btn btn-success btn-xxs">WA</a>
+                                                {{ csrf_field() }}
                                             </div>
                                         </td>
                                     </tr>
