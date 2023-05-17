@@ -26,19 +26,22 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Pelanggan</th>
-                                                <th>No Telpon</th>
                                                 <th>Alamat</th>
+                                                <th>No Telpon</th>
+                                                <th>Email</th>
+                                                <th>Jenis Paket</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($listpelanggan as $item)
+                                        @foreach ($pelanggan as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $item->nama_pelanggan }}</td>
-                                                    <td>{{ $item->no_telp }}</td>
                                                     <td>{{ $item->alamat }}</td>
                                                     <td>{{ $item->no_telp }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->nama_paket }}</td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

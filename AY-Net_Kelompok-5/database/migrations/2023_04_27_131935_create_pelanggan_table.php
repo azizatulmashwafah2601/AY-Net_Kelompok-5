@@ -19,7 +19,7 @@ class CreatePelangganTable extends Migration
             $table->string('alamat', 60);
             $table->string('no_telp', 13);
             $table->string('email', 30);
-            $table->string('id_paket');
+            $table->string('nama_paket');
             $table->timestamps();
         });
     }

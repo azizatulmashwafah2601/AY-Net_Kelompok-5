@@ -44,6 +44,7 @@ Route::prefix('admin')
         // Pelanggan 
         Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');
         Route::get('/addpelanggan', 'PelangganController@add')->name('addpelanggan');
+        Route::post('/savepelanggan', 'PelangganController@save')->name('savepelanggan');
         
         // Paket
         Route::get('/paket', 'PaketController@index')->name('paket');

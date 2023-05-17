@@ -18,13 +18,20 @@
                             </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form action="{{ route('savepaket') }}" method="post">
+                                        <form action="{{ route('savepelanggan') }}" method="post">
                                         {{ csrf_field() }}
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Pelanggan</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
                                                     <input type="text" class="form-control" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." name="nama_pelanggan">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="text-label form-label">Alamat</label>
+                                                <div class="input-group transparent-append">
+                                                    <span class="input-group-text"> <i class="fa fa-home"></i></span>
+                                                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat.." name="alamat">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
@@ -42,19 +49,17 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <label class="text-label form-label">Alamat</label>
-                                                <div class="input-group transparent-append">
-                                                    <span class="input-group-text"> <i class="fa fa-home"></i></span>
-                                                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat.." name="alamat">
-                                                </div>
-                                            </div>
-                                            <!-- <div class="mb-3">
                                                 <label class="text-label form-label" for="dlab-password">Jenis Paket</label>
                                                 <div class="input-group transparent-append">
-                                                    <span class="input-group-text"> </span>
-                                                    <input type="number" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket">
+                                                    <span class="input-group-text"> <i class="fa fa-cube"></i> </span>
+                                                    <input type="text" class="form-control" id="nama_paket" placeholder="Masukkan namapaket.." name="nama_paket">
+                                                        <!-- <select class="default-select form-control wide mb-3">
+                                                            @foreach ($paket as $paket)
+                                                                <option value="{{$paket->nama_paket}}">{{$paket->nama_paket}}</option>
+                                                            @endforeach
+                                                        </select> -->
                                                 </div>
-                                            </div> -->
+                                            </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
                                             <button type="submit" class="btn btn-danger">Batal</button>
                                         </form>
