@@ -60,4 +60,5 @@ Route::prefix('admin')
 
         // Transaksi
         Route::get('/viewtransaksi', 'TransaksiController@view')->name('viewtransaksi');
+        Route::get('/lunastransaksi', 'TransaksiController@update')->name();
     });
