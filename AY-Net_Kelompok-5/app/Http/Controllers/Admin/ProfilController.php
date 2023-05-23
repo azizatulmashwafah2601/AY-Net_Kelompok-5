@@ -36,6 +36,6 @@ class ProfilController extends Controller
         }
 
         $user->update();
-        return redirect()->back()->with('toast_success', 'Profil Berhasil Diubah');
+        return redirect('/admin/dashboard')->with('toast_success', 'Profil Berhasil Diubah');
     }
 }

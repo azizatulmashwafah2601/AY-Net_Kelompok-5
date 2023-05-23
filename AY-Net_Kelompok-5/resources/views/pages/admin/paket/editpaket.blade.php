@@ -24,14 +24,26 @@
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Paket</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                                                    <input type="text" class="form-control" id="nama_paket" placeholder="Masukkan nama paket.." name="nama_paket" value="{{ $paket->nama_paket }}">
+                                                    <input type="text" class="form-control @error('nama_paket') is-invalid @enderror" id="nama_paket" placeholder="Masukkan nama paket.." 
+                                                        name="nama_paket" value="{{ $paket->nama_paket }}">
+                                                        @error('nama_paket')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="dlab-password">Harga Paket</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> Rp. </span>
-                                                    <input type="number" class="form-control" id="harga_paket" placeholder="Masukkan harga paket.." name="harga_paket" value="{{ $paket->harga_paket }}">
+                                                    <input type="number" class="form-control @error('harga_paket') is-invalid @enderror" id="harga_paket" placeholder="Masukkan harga paket.." 
+                                                        name="harga_paket" value="{{ $paket->harga_paket }}">
+                                                        @error('harga_paket')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>

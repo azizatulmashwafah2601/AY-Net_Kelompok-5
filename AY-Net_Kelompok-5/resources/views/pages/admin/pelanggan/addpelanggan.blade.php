@@ -24,28 +24,52 @@
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Pelanggan</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                                                    <input type="text" class="form-control" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." name="nama_pelanggan">
+                                                    <input type="text" class="form-control @error('nama_pelanggan') is invalid @enderror" 
+                                                        id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." name="nama_pelanggan">
+                                                        @error('nama_pelanggan') 
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{$message}}</strong>
+                                                        </span> 
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">Alamat</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-home"></i></span>
-                                                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat.." name="alamat">
+                                                    <input type="text" class="form-control @error('alamat') is invalid @enderror"
+                                                        id="alamat" placeholder="Masukkan alamat.." name="alamat">
+                                                        @error('alamat') 
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{$message}}</strong>
+                                                        </span> 
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">No Telp</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                                                    <input type="number" class="form-control" id="no_telp" placeholder="Masukkan no telepon.." name="no_telp">
+                                                    <input type="number" class="form-control @error('no_telp') is invalid @enderror"
+                                                        id="no_telp" placeholder="Masukkan no telepon.." name="no_telp">
+                                                        @error('no_telp') 
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{$message}}</strong>
+                                                        </span> 
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">Email</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
-                                                    <input type="text" class="form-control" id="email" placeholder="Masukkan email.." name="email">
+                                                    <input type="text" class="form-control @error('email') is invalid @enderror"
+                                                        id="email" placeholder="Masukkan email.." name="email">
+                                                        @error('email') 
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{$message}}</strong>
+                                                        </span> 
+                                                        @enderror
                                                 </div>
                                             </div>
                                             <div class="mb-3">
