@@ -15,4 +15,8 @@ class TransaksiController extends Controller
     public function view(){
         return view('pages.admin.transaksi.viewtransaksi');
     }
+
+    public function update() {
+        return view('pages.admin.transaksi.lunastransaksi');
+    }
 }
