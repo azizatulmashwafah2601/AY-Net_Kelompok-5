@@ -51,13 +51,13 @@
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="dlab-password">Jenis Paket</label>
                                                 <div class="input-group transparent-append">
-                                                    <span class="input-group-text"> <i class="fa fa-cube"></i> </span>
-                                                    <input type="text" class="form-control" id="nama_paket" placeholder="Masukkan namapaket.." name="nama_paket">
-                                                        <!-- <select class="default-select form-control wide mb-3">
-                                                            @foreach ($paket as $paket)
+                                                    <span class="input-group-text"> <i class="fa fa-cube"></i> </span>                                                    
+                                                        <select class="form-control" aria-label="Default select example" name="nama_paket" id="exampleInputNamaPaket">
+                                                            <option value="">Pilih Paket</option>
+                                                            @foreach($paket as $paket)
                                                                 <option value="{{$paket->nama_paket}}">{{$paket->nama_paket}}</option>
                                                             @endforeach
-                                                        </select> -->
+                                                        </select>
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
