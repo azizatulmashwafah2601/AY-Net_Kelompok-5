@@ -24,28 +24,39 @@
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Pelanggan</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                                                    <input type="text" class="form-control" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." name="nama_pelanggan" value="#">
+                                                    <input type="text" class="form-control" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." name="nama_pelanggan" value="{{ $pelanggan->nama_pelanggan }}">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">Alamat</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-home"></i></span>
-                                                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat.." name="alamat" value="#">
+                                                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat.." name="alamat" value="{{ $pelanggan->alamat }}">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">No Telp</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                                                    <input type="number" class="form-control" id="no_telp" placeholder="Masukkan no telepon.." name="no_telp" value="#">
+                                                    <input type="number" class="form-control" id="no_telp" placeholder="Masukkan no telepon.." name="no_telp" value="{{ $pelanggan->no_telp }}">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="text-label form-label">Email</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
-                                                    <input type="text" class="form-control" id="email" placeholder="Masukkan email.." name="email" value="#">
+                                                    <input type="text" class="form-control" id="email" placeholder="Masukkan email.." name="email" value="{{ $pelanggan->email }}">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="text-label form-label" for="dlab-password">Jenis Paket</label>
+                                                <div class="input-group transparent-append">
+                                                    <span class="input-group-text"> <i class="fa fa-cube"></i> </span>                                                    
+                                                        <select class="form-control" name="nama_paket" id="nama_paket" required>
+                                                            @foreach($paket as $paket)
+                                                                <option @if($pelanggan['nama_paket']==$paket->nama_paket) selected @endif>{{$paket->nama_paket}}</option>
+                                                            @endforeach
+                                                        </select>
                                                 </div>
                                             </div>
                                             

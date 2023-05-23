@@ -33,8 +33,9 @@ class PelangganController extends Controller
         return redirect('admin/pelanggan')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
     public function edit($id_pelanggan) {
+        $paket = Paket::orderBy('id_paket', 'desc')->get();
         $pelanggan = Pelanggan::findorfail($id_pelanggan);
-        return view('pages.admin.pelanggan.editpelanggan', compact('pelanggan'));
+        return view('pages.admin.pelanggan.editpelanggan', compact('paket', 'pelanggan'));
     }
 
     public function update(Request $request, $id_pelanggan) {
@@ -43,6 +44,7 @@ class PelangganController extends Controller
             'alamat' => 'required',
             'no_telp' => 'required',
             'email' => 'required',
+            'nama_paket' => 'required',
         ]);
 
         $pelanggan = Pelanggan::findorfail($id_pelanggan);
