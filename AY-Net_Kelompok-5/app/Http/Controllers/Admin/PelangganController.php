@@ -32,4 +32,27 @@ class PelangganController extends Controller
 
         return redirect('admin/pelanggan')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
+    public function edit($id_pelanggan) {
+        $pelanggan = Pelanggan::findorfail($id_pelanggan);
+        return view('pages.admin.pelanggan.editpelanggan', compact('pelanggan'));
+    }
+
+    public function update(Request $request, $id_pelanggan) {
+        $this->validate($request, [
+            'nama_pelanggan' => 'required',
+            'alamat' => 'required',
+            'no_telp' => 'required',
+            'email' => 'required',
+        ]);
+
+        $pelanggan = Pelanggan::findorfail($id_pelanggan);
+        $pelanggan->update($request->all());
+        return redirect('admin/pelanggan')->with('toast_success', 'Data Berhasil Diubah');
+    }
+
+    public function destroy($id_pelanggan) {
+        $pelanggan = Pelanggan::findorfail($id_pelanggan);
+        $pelanggan->delete();
+        return back()->with('toast_success', 'Data Berhasil Dihapus');
+    }
 }

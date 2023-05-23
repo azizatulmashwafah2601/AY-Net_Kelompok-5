@@ -45,6 +45,8 @@ Route::prefix('admin')
         Route::get('/pelanggan', 'PelangganController@index')->name('pelanggan');
         Route::get('/addpelanggan', 'PelangganController@add')->name('addpelanggan');
         Route::post('/savepelanggan', 'PelangganController@save')->name('savepelanggan');
+        Route::get('/editpelanggan/{id_pelanggan}', 'PelangganController@edit')->name('editpelanggan');
+        Route::post('/updatepelanggan/{id_pelanggan}', 'PaketController@update')->name('updatepelanggan');
         
         // Paket
         Route::get('/paket', 'PaketController@index')->name('paket');
