@@ -29,6 +29,7 @@
                                         <th>Tagihan</th>
                                         <th>Bulan</th>
                                         <th>Tahun</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,6 +41,13 @@
                                             <td>{{ $item->harga_paket }}</td>
                                             <td>{{ $item->nama_bulan }}</td>
                                             <td>{{ $item->years }}</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a href="#"class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-check"></i></a>
+                                                    <a href="{{ route('redirectToWhatsApp', $item->id_transaksi) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-comment"></i></a>
+                                                    <a href="{{ route('printNota', $item->id_transaksi) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-print"></i></a>
+                                                </div>												
+											</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

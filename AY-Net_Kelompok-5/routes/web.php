@@ -64,6 +64,7 @@ Route::prefix('admin')
         // Transaksi
         Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
         Route::get('/filtertransaksi', 'TransaksiController@filter')->name('filtertransaksi');
+        Route::get('/printnota/{id_transaksi}', 'TransaksiController@printNota')->name('printNota');
         // Route::get('/viewtransaksi', 'TransaksiController@view')->name('viewtransaksi');
         // Route::get('/lunastransaksi', 'TransaksiController@update')->name('lunastransaksi');
 

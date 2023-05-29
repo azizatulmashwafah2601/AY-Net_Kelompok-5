@@ -27,6 +27,11 @@ class TransaksiController extends Controller
         return view('pages.admin.transaksi.viewtransaksi', compact('filter', 'transaksi'));
     }
 
+    public function printNota($id_transaksi){
+        $transaksi = Transaksi::findorfail($id_transaksi);
+        return view('pages.admin.transaksi.printnota', compact('transaksi'));
+    }
+
     // public function view(){
     //     $transaksi = Transaksi::all();
     //     return view('pages.admin.transaksi.viewtransaksi', compact('transaksi'));
