@@ -48,7 +48,7 @@
 				</a>
             </li>
             <li>
-                <a href="{{ route('tagihan') }}" class="ai-icon" aria-expanded="false">
+                <a href="{{ route('addtagihan') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>
 					<span class="nav-text">Tagihan</span>
 				</a>

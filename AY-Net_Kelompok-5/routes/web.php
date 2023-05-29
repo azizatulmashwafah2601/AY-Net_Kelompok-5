@@ -58,10 +58,12 @@ Route::prefix('admin')
         Route::get('/deletepaket/{id_paket}', 'PaketController@destroy')->name('deletepaket');
         
         // Tagihan
-        Route::get('/tagihan', 'TagihanController@index')->name('tagihan');
-        Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
+        Route::get('/addtagihan', 'TagihanController@add')->name('addtagihan');
+        Route::post('/savetagihan', 'TagihanController@save')->name('savetagihan');
 
         // Transaksi
-        Route::get('/viewtransaksi', 'TransaksiController@view')->name('viewtransaksi');
-        Route::get('/lunastransaksi', 'TransaksiController@update')->name('lunastransaksi');
+        Route::get('/transaksi', 'TransaksiController@index')->name('transaksi');
+        Route::get('/filtertransaksi', 'TransaksiController@filter')->name('filtertransaksi');
+        // Route::get('/viewtransaksi', 'TransaksiController@view')->name('viewtransaksi');
+        // Route::get('/lunastransaksi', 'TransaksiController@update')->name('lunastransaksi');
     });

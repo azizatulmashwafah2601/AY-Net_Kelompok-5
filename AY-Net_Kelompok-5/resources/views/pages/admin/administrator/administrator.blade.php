@@ -35,9 +35,9 @@
                                             @foreach ($administrator as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                    <td><a href="javascript:void(0);">{{ $item->name }}</a></td>    
-                                                    <td><a href="javascript:void(0);">{{ $item->email }}</a></td>
-                                                    <td><img src="{{ url('/img/administrator/'.$item->foto_profil) }}" alt="picture" width="100px"></td>
+                                                <td><a href="javascript:void(0);">{{ $item->name }}</a></td>    
+                                                <td><a href="javascript:void(0);">{{ $item->email }}</a></td>
+                                                <td><img src="{{ url('/img/administrator/'.$item->foto_profil) }}" alt="picture" width="100px"></td>
                                                 <td>
 													<div class="d-flex">
 														<!-- <a href="#" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a> -->

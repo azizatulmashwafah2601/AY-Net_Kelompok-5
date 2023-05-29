@@ -37,11 +37,11 @@
                                         @foreach ($pelanggan as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $item->nama_pelanggan }}</td>
-                                                    <td>{{ $item->alamat }}</td>
-                                                    <td>{{ $item->no_telp }}</td>
-                                                    <td>{{ $item->email }}</td>
-                                                    <td>{{ $item->nama_paket }}</td>
+                                                    <td><a href="javascript:void(0);">{{ $item->nama_pelanggan }}</a></td>
+                                                    <td><a href="javascript:void(0);">{{ $item->alamat }}</a></td>
+                                                    <td><a href="javascript:void(0);">{{ $item->no_telp }}</a></td>
+                                                    <td><a href="javascript:void(0);">{{ $item->email }}</a></td>
+                                                    <td><a href="javascript:void(0);">{{ $item->nama_paket }}</a></td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="{{ route('editpelanggan', $item->id_pelanggan) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

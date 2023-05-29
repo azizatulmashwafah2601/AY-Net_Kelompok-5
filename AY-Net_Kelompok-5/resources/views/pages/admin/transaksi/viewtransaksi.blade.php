@@ -12,12 +12,6 @@
         </div>
         <!-- row -->
         <div>
-            <div class="card text-white bg-primary">
-                <div class="card-body mb-0">
-                    <p class="card-text"><strong>Data Tagihan</strong></p>
-                    <p class="card-text"><strong>Bulan Mei Tahun 2023</strong></p>
-                </div>
-            </div>
             <!-- row -->
             <div class="col-12">
                 <div class="card">
@@ -30,42 +24,24 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Id Pelanggan</th>
-                                        <th>Nama</th>
+                                        <th>Nama Pelanggan</th>
+                                        <th>Jenis Paket</th>
                                         <th>Tagihan</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
+                                        <th>Bulan</th>
+                                        <th>Tahun</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>C001</td>
-                                        <td>Budi Hartono</td>
-                                        <td>Rp. 100.000</td>
-                                        <td><span class="badge badge-danger">Belum Bayar</span></td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <a href="{{ route('lunastransaksi') }}" class="btn btn-primary btn-xxs">Bayar</a>
-                                                <a href="{{ route('viewtransaksi') }}" class="btn btn-success btn-xxs">WA</a>
-                                                {{ csrf_field() }}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>C002</td>
-                                        <td>Agus Sartono</td>
-                                        <td>Rp. 150.000</td>
-                                        <td><span class="badge badge-danger">Belum Bayar</span></td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <a href="{{ route('lunastransaksi') }}" class="btn btn-primary btn-xxs">Bayar</a>
-                                                <a href="{{ route('viewtransaksi') }}" class="btn btn-success btn-xxs">WA</a>
-                                                {{ csrf_field() }}
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @foreach ($transaksi as $item)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->nama_pelanggan }}</td>
+                                            <td>{{ $item->nama_paket }}</td>
+                                            <td>{{ $item->harga_paket }}</td>
+                                            <td>{{ $item->nama_bulan }}</td>
+                                            <td>{{ $item->years }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

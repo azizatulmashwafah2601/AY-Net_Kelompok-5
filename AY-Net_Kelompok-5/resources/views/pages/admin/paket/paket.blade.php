@@ -35,8 +35,8 @@
                                             @foreach ($listpaket as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $item->nama_paket }}</td>
-                                                    <td>Rp. {{ $item->harga_paket }}</td>
+                                                    <td><a href="javascript:void(0);">{{ $item->nama_paket }}</a></td>
+                                                    <td><a href="javascript:void(0);">Rp. {{ $item->harga_paket }}</a></td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="{{ route('editpaket', $item->id_paket) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

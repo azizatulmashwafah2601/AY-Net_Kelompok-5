@@ -16,7 +16,7 @@ class PelangganController extends Controller
     }
 
     public function add(){
-        $paket = Paket::orderBy('id_paket', 'desc')->get();
+        $paket = Paket::orderBy('id_paket', 'asc')->get();
         return view('pages.admin.pelanggan.addpelanggan', compact('paket'));
     }
 
