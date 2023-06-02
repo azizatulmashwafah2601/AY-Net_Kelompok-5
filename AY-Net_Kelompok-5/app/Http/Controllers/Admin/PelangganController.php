@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Pelanggan;
 use App\Models\Paket;
 use routes\web;
@@ -11,13 +12,15 @@ use routes\web;
 class PelangganController extends Controller
 {
     public function index(){
-        $pelanggan = Pelanggan::all();
+        $pelanggan = Pelanggan::Join('paket', 'paket.id_paket', '=', 'pelanggan.id_paket')
+                    ->orderBy('id_pelanggan', 'asc')->get();
         return view('pages.admin.pelanggan.pelanggan', compact('pelanggan'));
     }
 
     public function add(){
         $paket = Paket::orderBy('id_paket', 'asc')->get();
-        return view('pages.admin.pelanggan.addpelanggan', compact('paket'));
+        $pelanggan = Pelanggan::orderBy('id_pelanggan', 'asc')->get();
+        return view('pages.admin.pelanggan.addpelanggan', compact('pelanggan', 'paket'));
     }
 
     public function save(Request $request)
@@ -27,14 +30,14 @@ class PelangganController extends Controller
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
             'email' => $request->email,
-            'nama_paket' => $request->nama_paket,
+            'id_paket' => $request->id_paket,
         ]);
 
         return redirect('admin/pelanggan')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
     public function edit($id_pelanggan) {
-        $paket = Paket::orderBy('id_paket', 'desc')->get();
         $pelanggan = Pelanggan::findorfail($id_pelanggan);
+        $paket = Paket::get();
         return view('pages.admin.pelanggan.editpelanggan', compact('paket', 'pelanggan'));
     }
 
@@ -44,7 +47,7 @@ class PelangganController extends Controller
             'alamat' => 'required',
             'no_telp' => 'required',
             'email' => 'required',
-            'nama_paket' => 'required',
+            'id_paket' => 'required',
         ]);
 
         $pelanggan = Pelanggan::findorfail($id_pelanggan);

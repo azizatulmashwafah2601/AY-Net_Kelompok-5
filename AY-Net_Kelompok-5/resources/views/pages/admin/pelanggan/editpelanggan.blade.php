@@ -24,7 +24,7 @@
                                                 <label class="text-label form-label" for="validationCustomUsername">Nama Pelanggan</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text"> <i class="fa fa-list"></i> </span>
-                                                    <input type="text" class="form-control @error('training') is-invalid @enderror" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." 
+                                                    <input type="text" class="form-control @error('nama_pelanggan') is-invalid @enderror" id="nama_pelanggan" placeholder="Masukkan nama pelanggan.." 
                                                         name="nama_pelanggan" value="{{ $pelanggan->nama_pelanggan }}">
                                                         @error('nama_pelanggan')
                                                         <span class="invalid-feedback" role="alert">
@@ -76,27 +76,28 @@
                                                 <label class="text-label form-label" for="dlab-password">Jenis Paket</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-cube"></i> </span>                                                    
-                                                        <select class="form-control @error('nama_paket') is-invalid @enderror" name="nama_paket" id="nama_paket" required>
-                                                            @foreach($paket as $paket)
-                                                                <option @if($pelanggan['nama_paket']==$paket->nama_paket) selected @endif>{{$paket->nama_paket}}</option>
+                                                        <select class="form-control" name="id_paket" id="id_paket" required>
+                                                            <option value="">Pilih Paket</option>
+                                                            @foreach($paket as $item)
+                                                                <option value="{{ $item->id_paket }}" @if($item->id_paket == $pelanggan->id_paket) selected @endif>{{ $item->nama_paket }}</option>
                                                             @endforeach
                                                         </select>
-                                                        @error('nama_paket')
-                                                        <div class="invalid-feedback">
-                                                            {{$message}}
-                                                        </div>
-                                                        @enderror
                                                 </div>
                                             </div>
                                             
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
-                                            <button type="submit" class="btn btn-danger">Batal</button>
+                                            <a
+                                                href="{{ route('pelanggan') }}"
+                                                class="btn btn-danger"
+                                                >Batal
+                                            </a>
                                         </form>
                                     </div>
                                 </div>  
                             </div>
                         </div>
                     </div>
+                </div> 
             </div>
         </div>
 @endsection

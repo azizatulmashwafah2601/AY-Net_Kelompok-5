@@ -13,6 +13,7 @@ class DashboardController extends Controller
         $admin = DB::table('users')->count();
         $pelanggan = DB::table('pelanggan')->count();
         $paket = DB::table('paket')->count();
-        return view('pages.admin.dashboard', compact('admin', 'pelanggan', 'paket'));
+        $transaksi = DB::table('transaksi')->count();
+        return view('pages.admin.dashboard', compact('admin', 'pelanggan', 'paket', 'transaksi'));
     }
 }

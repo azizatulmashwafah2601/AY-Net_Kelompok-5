@@ -26,10 +26,10 @@
                                                 <label class="col-lg-4 col-form-label"><strong>Bulan</strong></label>
                                                 <div class="col-sm-6">
                                                     <div class="input-group mb-3">
-                                                        <select class="form-control" aria-label="Default select example" name="nama_bulan" id="exampleInputNamaBulan">
+                                                        <select class="form-control" aria-label="Default select example" name="id_bulan" id="exampleInputNamaBulan">
                                                             <option value="">Pilih Bulan</option>
                                                             @foreach($bulan as $bulan)
-                                                                <option value="{{$bulan->nama_bulan}}">{{$bulan->nama_bulan}}</option>
+                                                                <option value="{{$bulan->id_bulan}}">{{$bulan->nama_bulan}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -49,75 +49,17 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-xl-6">
                                             <div class="mb-3 row">
                                                 <label class="col-lg-4 col-form-label"><strong>Nama Pelanggan</strong></label>
                                                 <div class="col-sm-6">
                                                     <div class="input-group mb-3">
-                                                        <select class="form-control" aria-label="Default select example" name="nama_pelanggan" id="exampleInputNamaPelanggan">
+                                                        <select class="form-control" aria-label="Default select example" name="id_pelanggan" id="exampleInputNamaPelanggan">
                                                             <option value="">Pilih Nama Pelanggan</option>
                                                             @foreach($pelanggan as $pelanggan)
-                                                                <option value="{{$pelanggan->nama_pelanggan}}">{{$pelanggan->nama_pelanggan}}</option>
+                                                                <option value="{{$pelanggan->id_pelanggan}}">{{$pelanggan->nama_pelanggan}}</option>
                                                             @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label"><strong>Nama Paket</strong></label>
-                                                <div class="col-sm-6">
-                                                    <div class="input-group mb-3">
-                                                        <select class="form-control" aria-label="Default select example" name="nama_paket" id="exampleInputNamaPaket">
-                                                            <option value="">Pilih Paket</option>
-                                                            @foreach($paket as $paket)
-                                                                <option value="{{$paket->nama_paket}}">{{$paket->nama_paket}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label"><strong>Harga Paket</strong></label>
-                                                <div class="col-sm-6">
-                                                    <div class="input-group mb-3">
-                                                        <select class="form-control" aria-label="Default select example" name="harga_paket" id="exampleInputHargaPaket">
-                                                            <option value="">Pilih Harga Paket</option>
-                                                            @foreach($harga_paket as $harga_paket)
-                                                                <option value="{{$harga_paket->harga_paket}}">{{$harga_paket->harga_paket}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label"><strong>Tanggal Transaksi</strong></label>
-                                                <div class="col-sm-6">
-                                                    <div class="input-group mb-3">
-                                                        <input type="date" class="form-control datetimepicker"
-                                                        class="form-control @error('tgl_transaksi') is-invalid @enderror"
-                                                        id="exampleInputTglTransaksi" name="tgl_transaksi" value="{{old('tgl_transaksi')}}">
-                                                            @error('tgl_transaksi') 
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{$message}}</strong>
-                                                            </span> 
-                                                            @enderror
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label"><strong>Status Tagihan</strong></label>
-                                                <div class="col-sm-6">
-                                                    <div class="input-group mb-3">
-                                                        <select class="form-control" aria-label="Default select example" name="status" id="exampleInputStatus">
-                                                            <option value="">Pilih Status</option>
-                                                            <option value="status">Bayar</option>
-                                                            <option value="status">Belum Bayar</option>
-                                                            @error('status') 
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{$message}}</strong>
-                                                            </span> 
-                                                            @enderror 
                                                         </select>
                                                     </div>
                                                 </div>
@@ -150,10 +92,10 @@
                                             @foreach ($tagihan as $item)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $item->nama_pelanggan }}</td>
-                                                    <td>{{ $item->nama_paket }}</td>
-                                                    <td>{{ $item->harga_paket }}</td>
-                                                    <td>{{ $item->nama_bulan }} / {{ $item->years }}</td>
+                                                    <td>{{ $item->pelanggan->nama_pelanggan }}</td>
+                                                    <td>{{ $item->pelanggan->paket->nama_paket }}</td>
+                                                    <td>Rp {{ number_format($item->pelanggan->paket->harga_paket) }}</td>
+                                                    <td>{{ $item->bulan->nama_bulan }} / {{ $item->years }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
@@ -162,6 +104,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
+@include('sweetalert::alert') 
 @endsection

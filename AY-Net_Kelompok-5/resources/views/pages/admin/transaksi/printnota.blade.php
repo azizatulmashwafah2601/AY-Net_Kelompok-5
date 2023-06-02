@@ -73,7 +73,7 @@
             </div>
             <div class="right">
                 <ul>
-                    <li>{{ $transaksi->id_transaksi }}</li>
+                    <li>TRX00{{ $transaksi->id_transaksi }}</li>
                     <li>{{ date('d-m-Y', strtotime($transaksi->created_at)) }}</li>
                 </ul>
             </div>
@@ -86,9 +86,9 @@
         </div>
         <hr>
         <div class="flex-container" style="text-align: left;">
-            <div style="margin-bottom: 10px; text-align:left;">{{ $transaksi->nama_pelanggan }}</div>
-            <div style="margin-bottom: 10px; text-align:center;">{{ $transaksi->nama_paket }}</div>
-            <div style="margin-bottom: 10px; text-align:right;">Rp {{ $transaksi->harga_paket }}</div>
+            <div style="margin-bottom: 10px; text-align:left;">{{ $transaksi->pelanggan->nama_pelanggan }}</div>
+            <div style="margin-bottom: 10px; text-align:center;">{{ $transaksi->pelanggan->paket->nama_paket }}</div>
+            <div style="margin-bottom: 10px; text-align:right;">Rp {{ number_format($transaksi->pelanggan->paket->harga_paket) }}</div>
         </div>
         <hr>
         <div class="flex-container" style="text-align: right; margin-top: 10px;">
@@ -102,9 +102,12 @@
             </div>
             <div style="text-align: right;">
                 <ul>
-                    <li>Rp {{ $transaksi->harga_paket }}</li>
-                    <li>Rp 100000</li>
-                    <li>Rp 0</li>
+                    <li>Rp {{ number_format($transaksi->pelanggan->paket->harga_paket) }}</li>
+                    <li>Rp {{ number_format($transaksi->total_bayar) }}</li>
+                    <li>
+                        <?php $kembalian = abs($transaksi->pelanggan->paket->harga_paket - $transaksi->total_bayar);
+                        ?>Rp {{ number_format($kembalian)}}
+                    </li>
                 </ul>
             </div>
         </div>

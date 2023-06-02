@@ -13,24 +13,25 @@ use routes\web;
 class TagihanController extends Controller
 {
     public function add(){
-        $paket = Paket::orderBy('id_paket', 'asc')->get();
-        $harga_paket = Paket::orderBy('id_paket', 'asc')->get();
+        $tagihan = Transaksi::Join('bulan', 'bulan.id_bulan', '=', 'transaksi.id_bulan')
+                    ->Join('pelanggan', 'pelanggan.id_pelanggan', '=', 'transaksi.id_pelanggan')
+                    ->orderBy('id_transaksi', 'asc')->get();
         $bulan = Bulan::orderBy('id_bulan', 'asc')->get();
         $pelanggan = Pelanggan::orderBy('id_pelanggan', 'asc')->get();
-        $tagihan = Transaksi::all();
-        return view('pages.admin.tagihan.tagihan', compact('paket', 'harga_paket', 'bulan', 'pelanggan', 'tagihan'));
+        
+        return view('pages.admin.tagihan.tagihan', compact('bulan', 'pelanggan', 'tagihan'));
     }
 
     public function save(Request $request)
     {
         Transaksi::create([
-            'nama_bulan' => $request->nama_bulan,
+            'id_bulan' => $request->id_bulan,
             'years' => $request->years,
-            'nama_pelanggan' => $request->nama_pelanggan,
-            'nama_paket' => $request->nama_paket,
-            'harga_paket' => $request->harga_paket,
-            'tgl_transaksi' => $request->tgl_transaksi,
-            'status' => $request->status,
+            'id_pelanggan' => $request->id_pelanggan,
+            'id_paket' => $request->id_paket,
+            'total_bayar' => '0',
+            'tgl_transaksi' => now(),
+            'status' => 'Belum Bayar',
         ]);
 
         return redirect('admin/addtagihan')->with('toast_success', 'Data Berhasil Ditambahkan');

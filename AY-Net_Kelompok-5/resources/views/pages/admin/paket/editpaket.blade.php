@@ -47,13 +47,18 @@
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
-                                            <button type="submit" class="btn btn-danger">Batal</button>
+                                            <a
+                                                href="{{ route('paket') }}"
+                                                class="btn btn-danger"
+                                                >Batal
+                                            </a>
                                         </form>
                                     </div>
                                 </div>  
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
 @endsection

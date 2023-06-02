@@ -76,22 +76,27 @@
                                                 <label class="text-label form-label" for="dlab-password">Jenis Paket</label>
                                                 <div class="input-group transparent-append">
                                                     <span class="input-group-text"> <i class="fa fa-cube"></i> </span>                                                    
-                                                        <select class="form-control" aria-label="Default select example" name="nama_paket" id="exampleInputNamaPaket">
+                                                        <select class="form-control" aria-label="Default select example" name="id_paket" id="exampleInputNamaPaket">
                                                             <option value="">Pilih Paket</option>
                                                             @foreach($paket as $paket)
-                                                                <option value="{{$paket->nama_paket}}">{{$paket->nama_paket}}</option>
+                                                                <option value="{{$paket->id_paket}}">{{$paket->nama_paket}}</option>
                                                             @endforeach
                                                         </select>
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn me-2 btn-primary">Simpan</button>
-                                            <button type="submit" class="btn btn-danger">Batal</button>
+                                            <a
+                                                href="{{ route('pelanggan') }}"
+                                                class="btn btn-danger"
+                                                >Batal
+                                            </a>
                                         </form>
                                     </div>
                                 </div>  
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
 @endsection
