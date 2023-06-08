@@ -83,7 +83,7 @@
 								  <div class="accordion-item">
 									<div class="accordion-header rounded-lg" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="true" role="button">
 										<span class="accordion-header-icon"></span>
-									  <span class="accordion-header-text">Data Paket</span>
+									  <span class="accordion-header-text">Accordion Header One</span>
 									  <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-one">

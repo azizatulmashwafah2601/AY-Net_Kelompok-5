@@ -8,7 +8,7 @@
         />
         <title>@yield('titlePage')</title>
 
-        @include('includes.admin.style')
+        @include('Includes.admin.style')
 
     </head>
 
@@ -50,14 +50,14 @@
             <!--**********************************
                 Nav header end
             ***********************************-->
-            @include('includes.admin.navbar')
+            @include('Includes.admin.navbar')
                     
-            @include('includes.admin.sidebar')
+            @include('Includes.admin.sidebar')
 
             @yield('content')
                     
-            @include('includes.admin.footer')
+            @include('Includes.admin.footer')
         </div>
-            @include('includes.admin.script')
+            @include('Includes.admin.script')
     </body>
 </html>
