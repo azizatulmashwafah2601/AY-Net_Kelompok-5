@@ -73,6 +73,6 @@ Route::prefix('admin')
         Route::get('/cetaklaporan/{tgl_awal}/{tgl_akhir}', 'LaporanController@cetakLaporan')->name('cetaklaporan');
 
         //testing
-        Route::get('/whatsapp/{id_pelanggan}', 'WhatsAppController@redirectToWhatsApp')->name('redirectToWhatsApp');
+        Route::get('/whatsapp/{id_pelanggan}', 'WhatsappController@redirectToWhatsApp')->name('redirectToWhatsApp');
 
     });
