@@ -84,8 +84,8 @@
                                                 <th>No</th>
                                                 <th>Nama Pelanggan</th>
                                                 <th>Jenis Paket</th>
+                                                <th>Harga</th>
                                                 <th>Tagihan</th>
-                                                <th>Bulan / Tahun</th>
                                             </tr>
                                         </thead>
                                         <tbody>

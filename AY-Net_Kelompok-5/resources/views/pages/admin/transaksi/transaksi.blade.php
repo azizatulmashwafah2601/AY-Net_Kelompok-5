@@ -56,8 +56,9 @@
                                                 <th>No</th>
                                                 <th>Nama Pelanggan</th>
                                                 <th>Jenis Paket</th>
+                                                <th>Harga</th>
                                                 <th>Tagihan</th>
-                                                <th>Tanggal Transaksi</th>
+                                                <th>Tgl Trx</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -69,20 +70,21 @@
                                                     <td>{{ $item->pelanggan->nama_pelanggan }}</td>
                                                     <td>{{ $item->pelanggan->paket->nama_paket }}</td>
                                                     <td>Rp {{ number_format($item->pelanggan->paket->harga_paket) }}</td>
+                                                    <td>{{ $item->bulan->nama_bulan }} / {{$item->years}}</td>
                                                     <td>{{ date('d F Y', strtotime($item->tgl_transaksi))  }}</td>
                                                     <td>
                                                         <?php if ($item->status == 'Belum Bayar') {
                                                             echo '<a class="badge badge-danger">Belum Bayar</a>';
                                                         } else {
-                                                            echo '<a class="badge badge-success">Bayar</a>';
+                                                            echo '<a class="badge badge-success">LUNAS</a>';
                                                         }
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="{{ route('edittransaksi', $item->id_transaksi) }}"class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-check"></i></a>
-                                                            <a href="{{ route('redirectToWhatsApp', $item->id_transaksi) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-comment"></i></a>
-                                                            <a href="{{ route('printNota', $item->id_transaksi) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-print"></i></a>
+                                                            <a href="{{ route('redirectToWhatsApp', $item->id_transaksi) }}" target="_blank" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-comment"></i></a>
+                                                            <a href="{{ route('printNota', $item->id_transaksi) }}" target="_blank" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fa fa-print"></i></a>
                                                         </div>												
                                                     </td>
                                                 </tr>

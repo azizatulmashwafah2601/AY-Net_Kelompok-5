@@ -60,7 +60,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ai-icon" aria-expanded="false">
+                <a href="{{ route('laporan') }}" class="ai-icon" aria-expanded="false">
 					<i class="flaticon-072-printer"></i>
 					<span class="nav-text">Laporan</span>
 				</a>

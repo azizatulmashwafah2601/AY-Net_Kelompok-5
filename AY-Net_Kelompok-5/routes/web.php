@@ -67,6 +67,10 @@ Route::prefix('admin')
         Route::get('/filtertransaksi', 'TransaksiController@filter')->name('filtertransaksi');
         Route::get('/edittransaksi/{id_transaksi}', 'TransaksiController@edit')->name('edittransaksi');
         Route::post('/updatetransaksi/{id_transaksi}', 'TransaksiController@update')->name('updatetransaksi');
+        
+        // Laporan
+        Route::get('/laporan', 'LaporanController@index')->name('laporan');
+        Route::get('/cetaklaporan/{tgl_awal}/{tgl_akhir}', 'LaporanController@cetakLaporan')->name('cetaklaporan');
 
         //testing
         Route::get('/whatsapp/{id_pelanggan}', 'WhatsAppController@redirectToWhatsApp')->name('redirectToWhatsApp');

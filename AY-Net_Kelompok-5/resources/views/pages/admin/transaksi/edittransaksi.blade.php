@@ -23,7 +23,7 @@
                                             <div class="mb-3">
                                                 <label class="text-label form-label" for="validationCustomUsername">Total Bayar</label>
                                                 <div class="input-group">
-                                                    <span class="input-group-text"> <i class="fa fa-list"></i> </span>
+                                                    <span class="input-group-text"> Rp. </span>
                                                     <input type="number" class="form-control @error('total_bayar') is-invalid @enderror" id="total_bayar" 
                                                         name="total_bayar" value="{{ $transaksi->total_bayar }}">
                                                         @error('total_bayar')
@@ -40,7 +40,7 @@
                                                         <select class="form-control" name="status" id="status" required>
                                                             <option value="">Pilih Status</option>
                                                             <option <?php if($transaksi['status']=='Belum Bayar') echo 'selected'?>>Belum Bayar</option>
-                                                            <option <?php if($transaksi['status']=='Bayar') echo 'selected'?>>Bayar</option>
+                                                            <option <?php if($transaksi['status']=='LUNAS') echo 'selected'?>>LUNAS</option>
                                                         </select>
                                                 </div>
                                             </div>

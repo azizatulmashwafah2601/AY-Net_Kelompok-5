@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nota | AY NET - Bondowoso'</title>
+    <title>Nota | AY NET - Bondowoso</title>
     <style>
         .container {
             width: 300px;
@@ -60,6 +60,7 @@
 <body>
     <div class="container">
         <div class="header" style="margin-bottom: 30px;">
+            <img src="{{url('frontend/images/logo-ay.png')}}" alt="picture" width="80px">
             <h3>AY NET</h3>
             <p>Jl. Kis Mangunsarkoro, Tamansari, Bondowoso</p>
         </div>
@@ -111,8 +112,11 @@
                 </ul>
             </div>
         </div>
+        <div class="container" style="text-align: center; margin-top: 10px;">
+            <h1>{{ $transaksi->status }}</h1>
+        </div>
         <hr>
-        <div class="header" style="margin-top: 50px;">
+        <div class="container" style="text-align: center; margin-top: 20px;">
             <p>Terimakasih telah berlangganan internet</p>
             <h3>AY NET</h3>
         </div>

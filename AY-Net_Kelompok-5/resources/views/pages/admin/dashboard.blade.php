@@ -64,7 +64,7 @@
 									</svg>								
 								</div>
 								<div>
-									<h2 class="text-white invoice-num">{{ $pelanggan }}</h2>
+									<h2 class="text-white invoice-num">{{ $transaksi }}</h2>
 									<span class="text-white fs-18">Total Transaksi</span>
 								</div>
 							</div>
