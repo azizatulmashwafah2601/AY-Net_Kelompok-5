@@ -83,35 +83,56 @@
 								  <div class="accordion-item">
 									<div class="accordion-header rounded-lg" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="true" role="button">
 										<span class="accordion-header-icon"></span>
-									  <span class="accordion-header-text">Accordion Header One</span>
+									  <span class="accordion-header-text">Bagaimana cara Edit/Update data Profile?</span>
 									  <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-one">
-									  <div class="accordion-body-text">
-										 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-									  </div>
+									  	<div class="accordion-body-text">
+											Pergi ke menu Profile, klik nama akun di pojok kanan atas lalu pilih dropdown menu Profile.<br>
+											Lakukan perubahan sesuai kebutuhan perubahan data,klik button Simpan untuk menyimpan dan Cancel untuk membatalkan.
+									  	</div>
 									</div>
 								  </div>
 								  <div class="accordion-item">
 									<div class="accordion-header collapsed rounded-lg" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" role="button" aria-expanded="true">
-									  <span class="accordion-header-text">Accordion Header Two</span>
+									  <span class="accordion-header-text">Bagaimana cara penggunaan action Add,Detail,Edit dan Delete pada menu - menu admin?</span>
 									 <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-one">
-									  <div class="accordion-body-text">
-										 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-									  </div>
+									  	<div class="accordion-body-text">
+										  	<p class="mb-3" style="text-align: justify">
+												<b>Tambah</b> <br>
+												klik button Tambah (berwarna Hijau). <br>
+												Isi form sesuai dengan kebutuhan data yang diminta pada field, <br>
+												kemudian klik Simpan untuk menyimpan dan Batal untuk membatalkan.
+												Lalu akan muncul notifikasi jika data berhasil disimpan.
+											</p>
+											<p class="mb-3" style="text-align: justify">
+												<b>Hapus data</b> <br> 
+												klik button Delete (berwarna merah) <br>
+												kemudian akan muncul notifikasi apakah yakin untuk melakukan hapus data.<br>
+												Klik yes jika yakin, kemudian cancel untuk membatalkan.	
+											</p>
+											<p class="mb-3" style="text-align: justify">
+												<b>Edit data</b> <br>
+												klik button action Pencil (berwarna hijau) <br>
+												di samping kanan data. Lihat detail data yang dipilih.<br>
+												Kemudian klik button Edit (berwarna hijau), Lakukan perubahan sesuai kebutuhan perubahan data,<br>
+												klik button Simpan untuk menyimpan dan Batal untuk membatalkan.
+											</p>
+									  	</div>
 									</div>
 								  </div>
 								  <div class="accordion-item">
 									<div class="accordion-header collapsed rounded-lg" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree" role="button" aria-expanded="true">
-									  <span class="accordion-header-text">Accordion Header Three</span>
+									  <span class="accordion-header-text">Bagaimana cara  merubah Status pembayaran pada menu Transaksi?</span>
 									  <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-one">
-									  <div class="accordion-body-text">
-										 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-									  </div>
+										<div class="accordion-body-text">
+											Pilih menu Transaksi<br>
+											Klik button Edit, silahkan merubah Status dan juga mengisikan total pembayaran yang dilakukan oleh pelanggan.
+										</div>
 									</div>
 								  </div>
 								</div>
