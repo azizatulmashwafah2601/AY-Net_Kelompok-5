@@ -83,42 +83,45 @@
 								  <div class="accordion-item">
 									<div class="accordion-header rounded-lg" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne" aria-expanded="true" role="button">
 										<span class="accordion-header-icon"></span>
-									  <span class="accordion-header-text">Bagaimana cara Edit/Update data Profile?</span>
+									  <span class="accordion-header-text">Bagaimana cara Edit / Update data Profile?</span>
 									  <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-one">
 									  	<div class="accordion-body-text">
-											Pergi ke menu Profile, klik nama akun di pojok kanan atas lalu pilih dropdown menu Profile.<br>
-											Lakukan perubahan sesuai kebutuhan perubahan data,klik button Simpan untuk menyimpan dan Cancel untuk membatalkan.
+											<p class="mb-3" style="text-align: justify">
+												Pergi ke menu Profile, <br>
+												Klik nama akun di pojok kanan atas lalu pilih dropdown menu Profile.<br>
+												Lakukan perubahan sesuai kebutuhan perubahan data, <br>
+												Klik button Simpan untuk menyimpan dan Cancel untuk membatalkan.
+											</p>
 									  	</div>
 									</div>
 								  </div>
 								  <div class="accordion-item">
 									<div class="accordion-header collapsed rounded-lg" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo" role="button" aria-expanded="true">
-									  <span class="accordion-header-text">Bagaimana cara penggunaan action Add,Detail,Edit dan Delete pada menu - menu admin?</span>
+									  <span class="accordion-header-text">Bagaimana penggunaan action Add, Edit dan Delete pada menu di fitur Admin?</span>
 									 <span class="accordion-header-indicator"></span>
 									</div>
 									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-one">
 									  	<div class="accordion-body-text">
 										  	<p class="mb-3" style="text-align: justify">
-												<b>Tambah</b> <br>
-												klik button Tambah (berwarna Hijau). <br>
+												<b>Tambah Data</b> <br>
+												Klik button Tambah (berwarna hijau). <br>
 												Isi form sesuai dengan kebutuhan data yang diminta pada field, <br>
-												kemudian klik Simpan untuk menyimpan dan Batal untuk membatalkan.
+												Kemudian klik Simpan untuk menyimpan dan Batal untuk membatalkan.
 												Lalu akan muncul notifikasi jika data berhasil disimpan.
 											</p>
 											<p class="mb-3" style="text-align: justify">
-												<b>Hapus data</b> <br> 
-												klik button Delete (berwarna merah) <br>
-												kemudian akan muncul notifikasi apakah yakin untuk melakukan hapus data.<br>
-												Klik yes jika yakin, kemudian cancel untuk membatalkan.	
+												<b>Edit Data</b> <br>
+												Klik button action Pencil (berwarna hijau) di samping kanan data <br>
+												Lakukan perubahan sesuai kebutuhan.<br>
+												Klik button Simpan untuk menyimpan perubahan dan button Batal untuk membatalkan.
 											</p>
 											<p class="mb-3" style="text-align: justify">
-												<b>Edit data</b> <br>
-												klik button action Pencil (berwarna hijau) <br>
-												di samping kanan data. Lihat detail data yang dipilih.<br>
-												Kemudian klik button Edit (berwarna hijau), Lakukan perubahan sesuai kebutuhan perubahan data,<br>
-												klik button Simpan untuk menyimpan dan Batal untuk membatalkan.
+												<b>Hapus Data</b> <br> 
+												Klik button action Trash (berwarna merah) <br>
+												Kemudian akan muncul notifikasi apakah yakin untuk menghapus data.<br>
+												Klik yes jika yakin dan cancel untuk membatalkan.	
 											</p>
 									  	</div>
 									</div>
@@ -130,8 +133,11 @@
 									</div>
 									<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-one">
 										<div class="accordion-body-text">
-											Pilih menu Transaksi<br>
-											Klik button Edit, silahkan merubah Status dan juga mengisikan total pembayaran yang dilakukan oleh pelanggan.
+											Pilih menu Transaksi, <br>
+											Klik button Edit, <br>
+											Rubah Status Pembayaran, <br>
+											Isikan total pembayaran yang dilakukan oleh pelanggan,
+											Klik Simpan untuk melakukan perubahan data.
 										</div>
 									</div>
 								  </div>
